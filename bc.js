@@ -97,16 +97,6 @@ client.on("message", async message => {
             }
 });
 
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const adminprefix = "$";
-const developers = ['439393453332234243'];
-
-client.on('ready', () => {
-    console.log(`Logged as ${client.user.tag}`)
-})
-
-
 client.on('message', message => { 
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
